@@ -51,7 +51,7 @@ class WeatherData(SetMeasurements, Subject, GetMeasurements):
         self.temperature = temperature
         self.humidity = humidity
         self.pressure = pressure
-        # self.notify()
+        self.notify()
     
     def getTemp(self):
         return self.temperature
