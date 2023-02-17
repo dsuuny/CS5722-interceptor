@@ -1,0 +1,2 @@
+humidity:65 Tempreture:80 Pressure:30
+humidity:70 Tempreture:91 Pressure:20

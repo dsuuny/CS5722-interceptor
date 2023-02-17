@@ -77,7 +77,7 @@ class CurrentConditionsDisplay(Observer, DisplayElement):
         self.display()
   
     def display(self):
-        print(f"current condition: {self.temperature}F degrees and {self.humidity}% humidity")
+        print(f"[CurrentConditionsDisplay] Current condition: {self.temperature}F degrees and {self.humidity}% humidity")
 
 class StatisticsDisplay(Observer, DisplayElement):
     def __init__(self, weatherData:WeatherData) -> None:
@@ -100,5 +100,5 @@ class StatisticsDisplay(Observer, DisplayElement):
         self.display()
   
     def display(self):
-        print(f"Avg/Max/Min temperature : {self.tempSum/self.numReadings}/{self.maxTemp}/{self.minTemp}")
+        print(f"[StatisticsDisplay] Avg/Max/Min temperature : {self.tempSum/self.numReadings}/{self.maxTemp}/{self.minTemp}")
 
