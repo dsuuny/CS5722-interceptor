@@ -1,3 +1,5 @@
+
+
 class SetMeasurements:
     def setMeasurement():
         pass
@@ -100,28 +102,3 @@ class StatisticsDisplay(Observer, DisplayElement):
     def display(self):
         print(f"Avg/Max/Min temperature : {self.tempSum/self.numReadings}/{self.maxTemp}/{self.minTemp}")
 
-class WeatherStation():
-    def __init__(self) -> None:
-        self.weatherData = WeatherData()
-        self.currentConditionsDisplay = CurrentConditionsDisplay(self.weatherData) #register the display to weatherData
-        self.statisticsDisplay = StatisticsDisplay(self.weatherData)
-
-    def public(self, temperature, humidity, pressure):
-        self.weatherData.setMeasurement(temperature, humidity, pressure)
-
-
-""" 
-step1: observer pattern
-step2: identify interception point   
-    I think it is the 
-        PreMarshalOutRequest: 
-step3: specify the context object
-step4: specify the interceptors
-step5: specify the dispatchers 
-step6: implement callback mechanisms in concrete Framework
-step7: implement concrete interceptors
-"""
-if __name__ == "__main__":
-    wd = WeatherStation()
-    wd.public(80, 65, 30)
-    wd.public(82, 70, 20)
